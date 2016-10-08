@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+    <% posts.forEach((post) => { %>
+        <div>
+            <span>Poster:</span>
+            <span class='author'><%= post.author %></span>
+        </div>
+        <div>
+            <span>Date:</span>
+            <span class='published'><%= post.published %></span>
+        </div>
+        <div>
+            <span class=''></span>
+            <span class='body'><%= post.body %></span>
+        </div>
+        <br />
+    <% }) %> 
+</body>
+</html>
