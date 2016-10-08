@@ -12,7 +12,10 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-app.get('/', (req, res, next) => db.posts.find((err, posts) => err ? next(err) : res.render('index', { posts: posts })));
+app.get('/', (req, res, next) => db.posts.find((err, posts) => err ? 
+    next(err) : 
+    res.render('index', { posts: posts })
+));
 
 app.get('/write-post', (req, res) => res.render('post-form'));
 
